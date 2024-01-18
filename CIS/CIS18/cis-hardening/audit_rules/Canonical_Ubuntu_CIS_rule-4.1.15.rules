@@ -1,0 +1,7 @@
+#
+# "Copyright 2019 Canonical Limited. All rights reserved."
+#
+#--------------------------------------------------------
+
+# Ensure system administrator actions (sudolog) are collected
+-w /var/log/sudo.log -p wa -k actions

@@ -1,0 +1,8 @@
+#
+# "Copyright 2019 Canonical Limited. All rights reserved."
+#
+#--------------------------------------------------------
+
+# Ensure changes to system administration scope (sudoers) is collected
+-w /etc/sudoers -p wa -k scope
+-w /etc/sudoers.d/ -p wa -k scope

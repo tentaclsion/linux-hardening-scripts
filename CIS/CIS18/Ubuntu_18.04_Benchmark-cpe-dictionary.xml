@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpe-list xmlns="http://cpe.mitre.org/dictionary/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cpe.mitre.org/dictionary/2.0 http://cpe.mitre.org/files/cpe-dictionary_2.2.xsd">
+  <cpe-item name="cpe:/o:canonical:ubuntu_linux:18.04::~~lts~~~">
+    <title xml:lang="en-us">Canonical Ubuntu Linux 18.04 LTS (Long-Term Support)</title>
+    <!-- the check references an OVAL file that contains an inventory definition -->
+    <check system="http://oval.mitre.org/XMLSchema/oval-definitions-5" href="Ubuntu_18.04_Benchmark-cpe-oval.xml">oval:com.ubuntu.xenial.benchmark:def:10</check>
+  </cpe-item>
+</cpe-list>

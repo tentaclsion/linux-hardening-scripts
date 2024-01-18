@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 oval-definitions-schema.xsd">
+	<generator>
+	  <oval:schema_version>5.11</oval:schema_version>
+	  <oval:timestamp>2016-11-07T00:00:00</oval:timestamp>
+	</generator>
+	<definitions>
+	  <definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:com.ubuntu.xenial.benchmark:def:10" version="1">
+	    <metadata>
+	      <title>Ubuntu 18.04 LTS</title>
+	      <affected family="unix">
+	        <platform>Ubuntu 18.04 LTS</platform>
+	      </affected>
+	      <reference ref_id="cpe:/o:canonical:ubuntu_linux:18.04" source="CPE"/>
+	      <description>Ubuntu 18.04 LTS</description>
+	    </metadata>
+	    <criteria>
+	      <criterion test_ref="oval:com.ubuntu.xenial.benchmark:tst:11" comment="Ubuntu 18.04 LTS"/>
+	    </criteria>
+	  </definition>
+	</definitions>
+	<tests>
+	  <ind:textfilecontent54_test xmlns:ind="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" check="all" check_existence="at_least_one_exists" id="oval:com.ubuntu.xenial.benchmark:tst:11" version="1" comment="Ubuntu 18.04 LTS">
+	    <ind:object object_ref="oval:com.ubuntu.xenial.benchmark:obj:12" />
+	    <ind:state state_ref="oval:com.ubuntu.xenial.benchmark:ste:13" />
+	  </ind:textfilecontent54_test>
+	</tests>
+	<objects>
+	  <ind:textfilecontent54_object xmlns:ind="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" id="oval:com.ubuntu.xenial.benchmark:obj:12" version="1">
+	    <ind:path>/etc</ind:path>
+	    <ind:filename>lsb-release</ind:filename>
+	    <ind:pattern operation="pattern match">^[\s\S]*DISTRIB_ID=Ubuntu[\s\S]*DISTRIB_RELEASE=(\d*\.?\d*)[\s\S]*$</ind:pattern>
+	    <ind:instance datatype="int">1</ind:instance>
+	  </ind:textfilecontent54_object>
+	</objects>
+	<states>
+	  <ind:textfilecontent54_state xmlns:ind="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" id="oval:com.ubuntu.xenial.benchmark:ste:13" version="1">
+	    <ind:subexpression>18.04</ind:subexpression>
+	  </ind:textfilecontent54_state>
+	</states>
+</oval_definitions>

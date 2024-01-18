@@ -1,0 +1,7 @@
+#
+# "Copyright 2019 Canonical Limited. All rights reserved."
+#
+#--------------------------------------------------------
+
+# Ensure the audit configuration is immutable
+-e 2

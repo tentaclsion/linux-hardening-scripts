@@ -1,0 +1,8 @@
+#
+# "Copyright 2019 Canonical Limited. All rights reserved."
+#
+#--------------------------------------------------------
+
+# Ensure events that modify the system's Mandatory Access Controls are collected
+-w /etc/apparmor/ -p wa -k MAC-policy
+-w /etc/apparmor.d/ -p wa -k MAC-policy
