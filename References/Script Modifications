@@ -1,0 +1,43 @@
+CIS DISABLES SERVICES, REENABLE THE ONES WE NEED AFTER RUNNING IT (FTP, WEB, etc.)
+
+finish updqtes
+- pause before doing big updates to turn on secutity updates (maybe scriptable)
+
+Redo auditing installation and configuration
+Time zone configuration
+unix time ^
+
+uninstall other package managers as well (imagine pacman is installed lul)
+we would have to disable their daemons too
+
+List All Installed Programs:
+apt list --installed
+dpkg-query -l
+snap list
+flatpak list
+
+https://ubuntu.com/security/cis
+secure snap packages
+
+Maybe try to fix the window resizing not working? (i cant find anywhere with a proper fix)
+https://github.com/vmware/open-vm-tools/issues/303 (there are way too many different solutions on here, dont think any will work)
+  sudo apt purge open-vm-tools
+  sudo apt update
+  sudo apt install open-vm-tools open-vm-tools-desktop
+
+def not putting in script but nice to have for later reference (better color handling)
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
